@@ -13,11 +13,13 @@ public class Main{
             if (str.charAt(i) != ' ') {
                 count++;
                 str2.append(str.charAt(i));
-                if (count>=max && i==length-1){
-                    str3=str2;
+                if(count>=max) {
+                    max = count;
+                    str3 = str2;
                 }
             }
-            else if (count>=max ) {
+            else if (count>=max) {
+                max=count;
                 count = 0;
                 str3=str2;
                 str2 = new StringBuilder();
@@ -28,4 +30,5 @@ public class Main{
         }
         System.out.println(str3);
     }
+
 }
